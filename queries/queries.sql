@@ -161,7 +161,7 @@ GROUP BY gra.nombre
 HAVING COUNT(asi.id) > 40;
 
 -- 22. Retorna un llistat que mostri el nom dels graus i la suma del nombre total de crèdits que hi ha per a cada tipus d'assignatura. El resultat ha de tenir tres columnes: nom del grau, tipus d'assignatura i la suma dels crèdits de totes les assignatures que hi ha d'aquest tipus. (grau, tipus, total_creditos)
-SELECT gra.nombre AS grau, asi.tipo AS tipus, SUM(asi.creditos) AS total_creditos
+SELECT gra.nombre AS grau, asi.tipo AS tipo, SUM(asi.creditos) AS total_creditos
 FROM grado AS gra
 JOIN asignatura AS asi
 ON asi.id_grado = gra.id
